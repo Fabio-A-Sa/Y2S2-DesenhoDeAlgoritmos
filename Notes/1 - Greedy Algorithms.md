@@ -18,18 +18,18 @@ Funcionamento geral do algoritmo:
 
 Exemplos de algoritmos: <br>
 
-1 - Dado um conjunto de moedas `const vector<int> &coins` e um troco `total`, retornar o menor número de moedas que prefazem esse valor
+1 - Dado um conjunto de moedas `const vector<int> &coins` e um troco `total`, retornar o menor número de moedas:
 `````c++
 vector<int> extract(int total, const vector<int> &coins) {
 
-    vector<int> solution = {};                                          # Inicialmente o conjunto solução está vazio
+    vector<int> solution = {};                                    # Inicialmente o conjunto solução está vazio
     priority_queue<int> sortedCoins(coins.begin(), coins.end());
     int currentAttemp;
 
-    while (total > 0) {                                                 # Enquanto a solução não existir
-        currentAttemp = sortedCoins.top();                              # Encontra-se o melhor candidato naquela altura
+    while (total > 0) {                                           # Enquanto a solução não existir
+        currentAttemp = sortedCoins.top();                        # Encontra-se o melhor candidato naquela altura
         sortedCoins.pop();
-        if (total - currentAttemp >= 0) {                               # Se viável, então acrescenta-se à solução
+        if (total - currentAttemp >= 0) {                         # Se viável, então acrescenta-se à solução
             solution.push_back(currentAttemp);
             total -= currentAttemp;
         } else continue;
