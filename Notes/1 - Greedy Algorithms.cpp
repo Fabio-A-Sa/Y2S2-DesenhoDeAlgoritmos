@@ -18,7 +18,7 @@ vector<int> extract(int total, const vector<int> &coins) {
     priority_queue<int> sortedCoins(coins.begin(), coins.end());
     int currentAttemp;
 
-    while (total > 0) {
+    while (total > 0 && !sortedCoins.empty()) {
         currentAttemp = sortedCoins.top();
         sortedCoins.pop();
         if (total - currentAttemp >= 0) {
@@ -27,7 +27,7 @@ vector<int> extract(int total, const vector<int> &coins) {
         } else continue;
     }
 
-    if (total < 0) solution.clear();
+    if (total != 0) solution.clear();
     return solution;
 }
 
