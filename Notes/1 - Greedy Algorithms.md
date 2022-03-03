@@ -15,10 +15,11 @@ Quando o algoritmo aplica uma heuristica para obter a solução mais favorável,
    1. Um item é escolhido pela função de seleção;
    2. Se o conjunto solução ficar inviável com esse item, então não voltar a selecioná-lo;
    3. Senão, adicioná-lo ao conjunto solução;
+<br>
+   
+## Exemplos de algoritmos: <br>
 
-#### Exemplos de algoritmos: <br>
-
-## 1 - Dado um conjunto de moedas `const vector<int> &coins` e um troco `total`, retornar o menor número de moedas: <br>
+### 1 - Dado um conjunto de moedas `const vector<int> &coins` e um troco `total`, retornar o menor número de moedas que prefazem o troco: <br>
 
 #### Prova de Optimalidade:
 
