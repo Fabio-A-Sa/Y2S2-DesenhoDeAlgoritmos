@@ -15,7 +15,6 @@ Quando o algoritmo aplica uma heuristica para obter a solução mais favorável,
    1. Um item é escolhido pela função de seleção;
    2. Se o conjunto solução ficar inviável com esse item, então não voltar a selecioná-lo;
    3. Senão, adicioná-lo ao conjunto solução;
-<br>
    
 ## Exemplos de algoritmos: <br>
 
@@ -27,12 +26,12 @@ Um sistema de moedas é canónico se o algoritmo ganancioso conseguir uma soluç
 Exemplo: <br>
 ````
 M = {1, 4, 5}
-x pertence a ]5 + 1 , 5 + 4[, ]6, 9[
+x pertence a ]5 + 1 , 5 + 4[ ou seja ]6, 9[
 x = {7, 8}
-para x = 7, o algoritmo ganancioso retorna []
-para x = 8, o algoritmo ganancioso retorna []
+para x = 7, o algoritmo ganancioso retorna [5, 1, 1], que é a solução ótima
+para x = 8, o algoritmo ganancioso retorna [5, 1, 1] mas o ótimo é [4, 4]
+Fica provado assim que o sistema não é canónico
 ````
-
 
 #### Código
 `````c++
@@ -56,3 +55,4 @@ vector<int> extract(int total, const vector<int> &coins) {
 }
 `````
 
+### 2 - Dado
