@@ -16,3 +16,5 @@ Funcionamento geral do algoritmo:
    2. Se o conjunto solução ficar inviável com esse item, então não voltar a selecioná-lo;
    3. Senão, adicioná-lo ao conjunto solução;
 
+Exemplos de algoritmos:
+
