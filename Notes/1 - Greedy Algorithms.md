@@ -8,7 +8,7 @@ Quando o algoritmo aplica uma heuristica para obter a solução mais favorável,
 - [x] Função objectivo, que atribui valor a uma solução;
 - [x] Função solução, que determina se e quando a solução é alcançada;
 
-Funcionamento geral do algoritmo:
+#### Funcionamento geral do algoritmo:
 
 1. Inicialmente o conjunto de itens está vazio;
 2. A cada passo:
@@ -16,15 +16,22 @@ Funcionamento geral do algoritmo:
    2. Se o conjunto solução ficar inviável com esse item, então não voltar a selecioná-lo;
    3. Senão, adicioná-lo ao conjunto solução;
 
-Exemplos de algoritmos: <br>
+#### Exemplos de algoritmos: <br>
 
-1 - Dado um conjunto de moedas `const vector<int> &coins` e um troco `total`, retornar o menor número de moedas: <br>
+## 1 - Dado um conjunto de moedas `const vector<int> &coins` e um troco `total`, retornar o menor número de moedas: <br>
 
 #### Prova de Optimalidade:
 
-Um sistema de moedas é canónico se o algoritmo ganancioso conseguir uma solução ótima com stock ilimitado. O melhor contraexemplo x situa-se para um dado conjunto de moedas M na gama M[2] + 1 < x < M[-1] + M[-2].
-Exemplo:
-com M = {1, 4, 5}, x pertence a ]5 + 1 , 5 + 4[, logo temos que x = {7, 8}
+Um sistema de moedas é canónico se o algoritmo ganancioso conseguir uma solução ótima com stock ilimitado. O melhor contraexemplo x situa-se para um dado conjunto de moedas M na gama M[2] + 1 < x < M[-1] + M[-2]. <br>
+Exemplo: <br>
+````
+M = {1, 4, 5}
+x pertence a ]5 + 1 , 5 + 4[, ]6, 9[
+x = {7, 8}
+para x = 7, o algoritmo ganancioso retorna []
+para x = 8, o algoritmo ganancioso retorna []
+````
+
 
 #### Código
 `````c++
