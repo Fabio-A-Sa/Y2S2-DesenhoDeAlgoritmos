@@ -26,7 +26,7 @@ vector<int> extract(int total, const vector<int> &coins) {
     priority_queue<int> sortedCoins(coins.begin(), coins.end());
     int currentAttemp;
 
-    while (total > 0) {                                           # Enquanto a solução não existir
+    while (total > 0 && !sortedCoins.empty()) {                   # Enquanto a solução não existir
         currentAttemp = sortedCoins.top();                        # Encontra-se o melhor candidato naquela altura
         sortedCoins.pop();
         if (total - currentAttemp >= 0) {                         # Se viável, então acrescenta-se à solução
@@ -35,7 +35,7 @@ vector<int> extract(int total, const vector<int> &coins) {
         } else continue;
     }
 
-    if (total < 0) solution.clear();
+    if (total != 0) solution.clear();
     return solution;
 }
 `````
