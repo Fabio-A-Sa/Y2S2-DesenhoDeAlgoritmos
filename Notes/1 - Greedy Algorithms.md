@@ -32,7 +32,6 @@ para x = 7, o algoritmo ganancioso retorna [5, 1, 1], que é a solução ótima
 para x = 8, o algoritmo ganancioso retorna [5, 1, 1] mas o ótimo é [4, 4]
 Fica provado assim que o sistema não é canónico
 ````
-
 #### Código
 `````c++
 vector<int> extract(int total, const vector<int> &coins) {
