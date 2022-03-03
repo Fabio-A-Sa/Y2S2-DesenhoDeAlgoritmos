@@ -15,24 +15,31 @@ void showContent(const vector<T> &content) {
 vector<int> extract(int total, const vector<int> &coins) {
 
     vector<int> solution = {};
-    priority_queue<int> sortedCoins = {};
-    for (int coin : coins) sortedCoins.push(coin);
+    priority_queue<int> sortedCoins(coins.begin(), coins.end());
+    int currentAttemp;
 
+    while (total > 0) {
+        currentAttemp = sortedCoins.top();
+        sortedCoins.pop();
+        if (total - currentAttemp >= 0) {
+            solution.push_back(currentAttemp);
+            total -= currentAttemp;
+        } else continue;
+    }
+
+    if (total < 0) solution.clear();
     return solution;
 }
 
 void coins() {
-
     vector<int> coins = {1, 1, 1, 2, 2, 2, 2, 5, 5, 10};
     int total = 8;
-    vector<int> solution = extract(total, coins);
-    showContent(solution);
-
+    cout << "Coins: ";
+    showContent(extract(total, coins));
 }
 
 int main () {
 
     coins();
-
     return 0;
 }
