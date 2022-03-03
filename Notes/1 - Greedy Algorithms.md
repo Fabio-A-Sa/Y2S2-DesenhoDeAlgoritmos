@@ -18,7 +18,15 @@ Funcionamento geral do algoritmo:
 
 Exemplos de algoritmos: <br>
 
-1 - Dado um conjunto de moedas `const vector<int> &coins` e um troco `total`, retornar o menor número de moedas:
+1 - Dado um conjunto de moedas `const vector<int> &coins` e um troco `total`, retornar o menor número de moedas: <br>
+
+#### Prova de Optimalidade:
+
+Um sistema de moedas é canónico se o algoritmo ganancioso conseguir uma solução ótima com stock ilimitado. O melhor contraexemplo x situa-se para um dado conjunto de moedas M na gama M[2] + 1 < x < M[-1] + M[-2].
+Exemplo:
+com M = {1, 4, 5}, x pertence a ]5 + 1 , 5 + 4[, logo temos que x = {7, 8}
+
+#### Código
 `````c++
 vector<int> extract(int total, const vector<int> &coins) {
 
@@ -39,3 +47,4 @@ vector<int> extract(int total, const vector<int> &coins) {
     return solution;
 }
 `````
+
