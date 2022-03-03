@@ -16,5 +16,26 @@ Funcionamento geral do algoritmo:
    2. Se o conjunto solução ficar inviável com esse item, então não voltar a selecioná-lo;
    3. Senão, adicioná-lo ao conjunto solução;
 
-Exemplos de algoritmos:
+Exemplos de algoritmos: <br>
 
+1 - Dado um conjunto de moedas `const vector<int> &coins` e um troco `total`, retornar o menor número de moedas que prefazem esse valor
+`````c++
+vector<int> extract(int total, const vector<int> &coins) {
+
+    vector<int> solution = {};                                          # Inicialmente o conjunto solução está vazio
+    priority_queue<int> sortedCoins(coins.begin(), coins.end());
+    int currentAttemp;
+
+    while (total > 0) {                                                 # Enquanto a solução não existir
+        currentAttemp = sortedCoins.top();                              # Encontra-se o melhor candidato naquela altura
+        sortedCoins.pop();
+        if (total - currentAttemp >= 0) {                               # Se viável, então acrescenta-se à solução
+            solution.push_back(currentAttemp);
+            total -= currentAttemp;
+        } else continue;
+    }
+
+    if (total < 0) solution.clear();
+    return solution;
+}
+`````
