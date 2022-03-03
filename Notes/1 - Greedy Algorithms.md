@@ -11,4 +11,8 @@ Quando o algoritmo aplica uma heuristica para obter a solução mais favorável,
 Funcionamento geral do algoritmo:
 
 1. Inicialmente o conjunto de itens está vazio;
-2. 
+2. A cada passo:
+   1. Um item é escolhido pela função de seleção;
+   2. Se o conjunto solução ficar inviável com esse item, então não voltar a selecioná-lo;
+   3. Senão, adicioná-lo ao conjunto solução;
+
