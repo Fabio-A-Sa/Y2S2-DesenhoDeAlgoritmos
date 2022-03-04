@@ -80,7 +80,7 @@ void activities() {
 
 int main () {
 
-    //coins();
+    coins();
     activities();
     return 0;
 }
