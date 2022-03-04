@@ -14,17 +14,16 @@ This repository contains all the exercises and assessments of the UC Desenho de 
 ## Here are several documents, namely:
 
 ### My Drafts <br/>
-Pieces of code for exercises and assessments, notes that I take during practical classes and other experiences using C and C++ languages. It is an authentic disorganized notebook. <br/>
+Pieces of code for exercises and assessments, notes that I take during practical classes and other experiences using C and C++ languages. It is an authentic disorganized notebook. <br>
 
 ### Notes
-Notes that I take during theoretical lectures, in Cpp files or Markdown<br/>
+Notes that I take during theoretical lectures, in Cpp files or Markdown <br>
 
 ### Exercises
-Varied exercises of easy, medium and difficult level, about the subject taught in the present week. They complement the weekly work developed during the practical classes. <br/>
-<br>
+Varied exercises of easy, medium and difficult level, about the subject taught in the present week. They complement the weekly work developed during the practical classes. <br>
 
 ### Projects:
 Soon
 
-**@ Fábio Araújo de Sá** <br/>
+**@ Fábio Araújo de Sá** <br>
 **2021/2022**
