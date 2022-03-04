@@ -5,11 +5,23 @@
 #include <algorithm>
 using namespace std;
 
+struct Activity {
+    string name;
+    int start;
+    int finish;
+};
+
 template <class T>
 void showContent(const vector<T> &content) {
     for (const T &item : content) {
         cout << item << " ";
     } cout << endl;
+}
+
+void showContent(const vector<Activity> &activities) {
+    for (const Activity &activity : activities) {
+        cout << activity.name << " -> " << activity.start << ":" << activity.finish << endl;
+    }
 }
 
 vector<int> extract(int total, const vector<int> &coins) {
@@ -38,21 +50,15 @@ void coins() {
     showContent(extract(total, coins));
 }
 
-struct Activity {
-    string name;
-    int start;
-    int finish;
-};
-
 void activities() {
 
     vector<Activity> activities = {{"a1", 1, 3}, {"a2", 4, 6}, {"a3", 0,  7},
                                    {"a4", 2, 9}, {"a5", 5, 11}, {"a6", 8, 12},
                                    {"a7", 1, 13}, {"a8", 10, 14}};
 
-    for (const Activity &activity : activities) {
-        cout << activity.name << " -> " << activity.start << ":" << activity.finish << endl;
-    }
+    sort(activities.begin(), activities.end(), [](const Activity &a1, const Activity &a2) { return a1.finish < a2.finish;} );
+    showContent(activities);
+
 }
 
 int main () {
