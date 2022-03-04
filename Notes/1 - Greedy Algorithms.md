@@ -61,7 +61,8 @@ vector<int> extract(int total, const vector<int> &coins) {
 vector<Activity> getNonOverlappingActivities(const vector<Activity> &content) {
 
     vector<Activity> activities(content.begin(), content.end());
-    sort(activities.begin(), activities.end(), [](const Activity &a1, const Activity &a2) { return a1.finish < a2.finish;} );
+    sort(activities.begin(), activities.end(), 
+         [](const Activity &a1, const Activity &a2) { return a1.finish < a2.finish;} );
     vector<Activity> solution = {};
 
     solution.push_back(activities.front());
