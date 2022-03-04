@@ -1,4 +1,2 @@
-//
-// Created by Fábio Sá on 05/03/2022.
-//
-
+// Created on March, 2022
+// @author: Fábio Araújo de Sá
