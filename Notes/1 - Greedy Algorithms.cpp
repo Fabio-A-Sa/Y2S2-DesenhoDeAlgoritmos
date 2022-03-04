@@ -46,12 +46,18 @@ struct Activity {
 
 void activities() {
 
-    vector<Activity> activities = {{"a1", }, {}, {}, {}, }
+    vector<Activity> activities = {{"a1", 1, 3}, {"a2", 4, 6}, {"a3", 0,  7},
+                                   {"a4", 2, 9}, {"a5", 5, 11}, {"a6", 8, 12},
+                                   {"a7", 1, 13}, {"a8", 10, 14}};
+
+    for (const Activity &activity : activities) {
+        cout << activity.name << " -> " << activity.start << ":" << activity.finish << endl;
+    }
 }
 
 int main () {
 
-    coins();
+    //coins();
     activities();
     return 0;
 }
