@@ -50,6 +50,11 @@ void coins() {
     showContent(extract(total, coins));
 }
 
+void getNonOverlapingActivities(vector<Activity> activities) {
+
+
+}
+
 void activities() {
 
     vector<Activity> activities = {{"a1", 1, 3}, {"a2", 4, 6}, {"a3", 0,  7},
@@ -57,8 +62,17 @@ void activities() {
                                    {"a7", 1, 13}, {"a8", 10, 14}};
 
     sort(activities.begin(), activities.end(), [](const Activity &a1, const Activity &a2) { return a1.finish < a2.finish;} );
-    showContent(activities);
+    vector<Activity> solution = {};
+    solution.push_back(activities.front());
+    int currentTime = solution.front().finish;
 
+    for (const Activity &activity : activities) {
+        if (currentTime < activity.start) {
+            currentTime = activity.finish;
+            solution.push_back(activity);
+        }
+    }
+    showContent(solution); // a1, a2, a6
 }
 
 int main () {
