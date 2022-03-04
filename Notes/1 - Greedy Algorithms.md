@@ -56,3 +56,24 @@ vector<int> extract(int total, const vector<int> &coins) {
 
 ### 2 - Dado um conjunto de atividades, com hora de início e hora de fim, encontrar o subconjunto com maior número de atividades não sobrepostas
 
+#### Código
+`````c++
+vector<Activity> getNonOverlappingActivities(const vector<Activity> &content) {
+
+    vector<Activity> activities(content.begin(), content.end());
+    sort(activities.begin(), activities.end(), [](const Activity &a1, const Activity &a2) { return a1.finish < a2.finish;} );
+    vector<Activity> solution = {};
+
+    solution.push_back(activities.front());
+    int currentTime = solution.front().finish;
+
+    for (const Activity &activity : activities) {
+        if (currentTime < activity.start) {
+            currentTime = activity.finish;
+            solution.push_back(activity);
+        }
+    }
+    return solution;
+}
+`````
+
