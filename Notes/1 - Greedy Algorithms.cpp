@@ -38,8 +38,20 @@ void coins() {
     showContent(extract(total, coins));
 }
 
+struct Activity {
+    string name;
+    int start;
+    int finish;
+};
+
+void activities() {
+
+    vector<Activity> activities = {{"a1", }, {}, {}, {}, }
+}
+
 int main () {
 
     coins();
+    activities();
     return 0;
 }

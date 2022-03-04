@@ -54,4 +54,5 @@ vector<int> extract(int total, const vector<int> &coins) {
 }
 `````
 
-### 2 - Dado
+### 2 - Dado um conjunto de atividades, com hora de início e hora de fim, encontrar o subconjunto com maior número de atividades não sobrepostas
+
