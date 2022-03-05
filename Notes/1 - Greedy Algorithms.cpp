@@ -1,8 +1,8 @@
+
+
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <string>
-#include <algorithm>
 using namespace std;
 
 struct Activity {
@@ -50,19 +50,12 @@ void coins() {
     showContent(extract(total, coins));
 }
 
-void getNonOverlapingActivities(vector<Activity> activities) {
+vector<Activity> getNonOverlappingActivities(const vector<Activity> &content) {
 
-
-}
-
-void activities() {
-
-    vector<Activity> activities = {{"a1", 1, 3}, {"a2", 4, 6}, {"a3", 0,  7},
-                                   {"a4", 2, 9}, {"a5", 5, 11}, {"a6", 8, 12},
-                                   {"a7", 1, 13}, {"a8", 10, 14}};
-
+    vector<Activity> activities(content.begin(), content.end());
     sort(activities.begin(), activities.end(), [](const Activity &a1, const Activity &a2) { return a1.finish < a2.finish;} );
     vector<Activity> solution = {};
+
     solution.push_back(activities.front());
     int currentTime = solution.front().finish;
 
@@ -72,7 +65,16 @@ void activities() {
             solution.push_back(activity);
         }
     }
-    showContent(solution); // a1, a2, a6
+    return solution;
+}
+
+void activities() {
+
+    vector<Activity> activities = {{"a1", 1, 3}, {"a2", 4, 6}, {"a3", 0,  7},
+                                   {"a4", 2, 9}, {"a5", 5, 11}, {"a6", 8, 12},
+                                   {"a7", 1, 13}, {"a8", 10, 14}};
+
+    showContent(getNonOverlappingActivities(activities)); // a1, a2, a6
 }
 
 int main () {
