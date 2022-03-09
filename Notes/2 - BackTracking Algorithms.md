@@ -17,6 +17,37 @@
 Representação conceptual do espaço de solução com base numa árvore binária. Para cada nível da árvore, i, decide-se se está ou não presente o valor array[i]. Cada nó tem a soma do resultado acumulado desde a raiz. <br>
 Depois escolhe-se a melhor forma de percorrer a árvore (em ordem, dfs ...).
 
+Pseudocódigo exemplificativo:
+
+```c++
+// @ global
+vector<int> W = {2, 4, 6};          // vector de dados
+vector<bool> sel(8, true);          // sel.size() == math.pow(2, W.size())
+int S = 10;                         // soma procurada
+int n = 3;                          // número de itens do vector
+
+bool sumOfSubsets(int i, int sumSel) {
+
+    // if solution found, print and terminate
+    if (sumSel == S) { 
+        cout << "Solução encontrada!" << endl; 
+        return true;
+    }
+
+    // if there is no child to explore, just backtrack
+    if (i == n) return false;
+
+    // explore item W[i] (try using and not using) (choice point)
+    sel[i] = true;
+    if (sumOfSubsets(i+1, sumSel + W[i])) return true;  // left
+    sel[i] = false;
+    if (sumOfSubsets(i+1, sumSel)) return true;         // right
+
+    // no solution found
+    return false;
+}
+```
+
 Neste caso, no pior cenário o tempo de execução é igual ao espaço de resultados que é exponencial. Então T(n) = O(2^n). Como melhorar? <br>
 Por exemplo, fazer uma `poda de pesquisa - pruning`, que acaba com a pesquisa naquele espaço se:
 1. A soma selecionada já é maior à soma a prefazer;
