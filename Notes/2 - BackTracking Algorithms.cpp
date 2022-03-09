@@ -4,7 +4,7 @@ using namespace std;
 
 // @ global
 vector<int> W = {2, 4, 6};          // vector de dados
-vector<bool> sel(8, true);          // sel.size() == pow(2, W.size())
+vector<bool> sel(8, true);          // sel.size() == math.pow(2, W.size())
 int S = 10;                         // soma procurada
 int n = 3;                          // número de itens do vector
 
