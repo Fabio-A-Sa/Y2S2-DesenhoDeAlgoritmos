@@ -68,7 +68,15 @@ A complexidade temporal é por isso `T(n) = O(log n)`.
 
 Com a utilização de K núcleos do processador, é possível fazer um processamento paralelo de várias funções, de forma a maximizar o tempo dispendido no processo. <br>
 
-Instruções em C++:
+#### Para descobrir o número de cores do processador usado:
+
+```c++
+int getCoreNumber() {
+    return std::thread::hardware_concurrency();
+}
+```
+
+#### Exemplo de implementação com MergeSort:
 
 ```c++
 
