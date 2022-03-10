@@ -36,5 +36,3 @@ void exploreNode(Node v) {
     }
 }
 ```
-
-
