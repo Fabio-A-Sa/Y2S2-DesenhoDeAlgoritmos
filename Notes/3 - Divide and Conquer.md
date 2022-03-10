@@ -59,6 +59,14 @@ Para um limiar típico de n = 20, ainda é melhor usar o [Insertion Sort](https:
 
 Ordenar elementos maiores e menores que um pivot do array e concatenar. `S(n) = 1` para qualquer caso e `T(n) varia entre O(n^2) no pior caso e O(n log n) nos restantes`, com escolha aleatória do valor de pivot.
 
+### Cálculos matemáticos
+
+Calcular `math.pow(x, n)` com T(n) = O(log n) e S(n) = O(log n) com divisão e conquista e mais eficiente possível. Exemplo:
+
+```c++
+
+```
+
 ### Pesquisa Binária
 
 Dividir o array ordenado em duas partes e escolher aquela que se adequa ao valor escolhido (parte da direita para valores maiores, a esquerda para menores), até descobrir ou o valor (return true) ou um intervalo em que ele poderia estar (return false).
@@ -96,3 +104,6 @@ void Mergesort(int A[], int p, int q, int r, int threads) {
     }
 }
 ```
+
+Nota: [=] significa que o corpo da função pode usar por cópia todas as variáveis locais da função que insere.
+
