@@ -53,7 +53,7 @@ void Merge(int A[], int p, int q, int r) {
 #### Complexidade Temporal
 
 A profundidade de recursão é sempre para um dado array de n elementos, `math.ceil(log(2) n`), há também n splits e n merges. O tempo total é na ordem de `T(n) = O(n log n)`.
-Para um limiar típico de n = 20, ainda é melhor usar o [Insertion Sort]() em vez do MergeSort ou do QuickSort.
+Para um limiar típico de n = 20, ainda é melhor usar o [Insertion Sort](https://www.geeksforgeeks.org/insertion-sort/) em vez do MergeSort ou do QuickSort. Consiste em percorrer o array e a cada valor de índice i, colocá-lo num índice [0..i] se for menor. Assim garante-se que o subarray [0..i] está sempre ordenado.
 
 ### QuickSort
 
@@ -63,3 +63,13 @@ Ordenar elementos maiores e menores que um pivot do array e concatenar. `S(n) = 
 
 Dividir o array ordenado em duas partes e escolher aquela que se adequa ao valor escolhido (parte da direita para valores maiores, a esquerda para menores), até descobrir ou o valor (return true) ou um intervalo em que ele poderia estar (return false).
 A complexidade temporal é por isso `T(n) = O(log n)`.
+
+## Processamento Paralelo
+
+Com a utilização de cors do processador, é possível fazer um processamento paralelo de várias funções, de forma a maximizar o tempo dispendido no processo. <br>
+
+Instruções em C++:
+
+```c++
+
+```
