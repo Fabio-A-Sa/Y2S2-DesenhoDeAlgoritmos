@@ -79,5 +79,20 @@ int getCoreNumber() {
 #### Exemplo de implementação com MergeSort:
 
 ```c++
-
+void Mergesort(int A[], int p, int q, int r, int threads) {
+    if (p < r) {
+        int q = math.floor((p+q) / 2);
+        if (threads > 1) {
+            std::thread t ([=]() {                  // Lança a função para outro core
+                MergeSort(A, p, q, thread / 2);
+            });
+            MergeSort(A, q+1, r, threads / 2);
+            t.join();                               // Espera que a outra thread termine
+        } else {
+            MergeSort(A, p, q, 1);
+            MergeSort(A, q+1, r, 1);
+        }
+        Merge(A, p, q, r);
+    }
+}
 ```
