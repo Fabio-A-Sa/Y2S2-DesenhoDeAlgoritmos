@@ -1,3 +1,6 @@
+// Created on March, 2022
+// @author: Fábio Araújo de Sá
+
 #include <iostream>
 #include <thread>
 using namespace std;
@@ -19,6 +22,7 @@ void MergeSort(int A[], int p, int r) {
     }
 }
 
+// @Overload
 void Merge(int A[], int p, int q, int r) {
 
     // copy -> S(n) = O(n)
@@ -37,7 +41,23 @@ void Merge(int A[], int p, int q, int r) {
     }
 }
 
-
+// @Overload
+void Mergesort(int A[], int p, int q, int r, int threads) {
+    if (p < r) {
+        int q = math.floor((p+q) / 2);
+        if (threads > 1) {
+            std::thread t ([=]() {          // Lança a função para outro core
+                MergeSort(A, p, q, thread / 2);
+            });
+            MergeSort(A, q+1, r, threads / 2);
+            t.join();                       // Espera que a outra thread termine
+        } else {
+            MergeSort(A, p, q, 1);
+            MergeSort(A, q+1, r, 1);
+        }
+        Merge(A, p, q, r);
+    }
+}
 
 int main () {
     cout << getCoreNumber() << endl; // 8

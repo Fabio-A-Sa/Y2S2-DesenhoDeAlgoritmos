@@ -66,7 +66,7 @@ A complexidade temporal é por isso `T(n) = O(log n)`.
 
 ## Processamento Paralelo
 
-Com a utilização de K núcleos do processador, é possível fazer um processamento paralelo de várias funções, de forma a maximizar o tempo dispendido no processo. <br>
+Com a utilização de K núcleos do processador, é possível fazer um processamento paralelo de várias funções, de forma a maximizar o tempo dispendido no processo em K vezes. <br>
 
 #### Para descobrir o número de cores do processador usado:
 
