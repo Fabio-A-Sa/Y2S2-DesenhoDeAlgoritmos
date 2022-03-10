@@ -53,6 +53,7 @@ void Merge(int A[], int p, int q, int r) {
 #### Complexidade Temporal
 
 A profundidade de recursão é sempre para um dado array de n elementos, `math.ceil(log(2) n`), há também n splits e n merges. O tempo total é na ordem de `T(n) = O(n log n)`.
+Para um limiar típico de n = 20, ainda é melhor usar o [Insertion Sort]() em vez do MergeSort ou do QuickSort.
 
 ### QuickSort
 
