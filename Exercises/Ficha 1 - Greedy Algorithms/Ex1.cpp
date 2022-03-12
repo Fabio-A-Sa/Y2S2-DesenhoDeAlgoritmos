@@ -22,7 +22,7 @@ bool sum3(unsigned int T, unsigned int nums[3]) {
 }
 
 bool sum3_a(unsigned int T, unsigned int nums[3]) {
-    
+
     for (int i = 0 ; i < T ; i++) {
         for (int j = 0 ; j < T ; j++) {
             if (T-i-j > 0) {

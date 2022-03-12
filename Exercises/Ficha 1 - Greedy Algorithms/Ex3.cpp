@@ -2,7 +2,9 @@
 // @author: Fábio Araújo de Sá
 
 #include "exercises.h"
-#include <gtest/gtest.h>
+#include <iostream>
+#include <cmath>
+using namespace std;
 
 int sumValues(vector<int> results, int i , int j) {
     int total = 0;
@@ -10,19 +12,56 @@ int sumValues(vector<int> results, int i , int j) {
     return total;
 }
 
+bool isSolution (unsigned int C[], int currentCandidate[], int n, int T) {
+    int total = 0;
+    for (int i = 0 ; i < n ; i++) {
+        total += C[i] * currentCandidate[i];
+    }
+    return total == T;
+}
+
+int sum(int attemp[], int n) {
+    int total = 0;
+    for (int i = 0 ; i < n ; i++) {
+        total += attemp[i];
+    }
+    return total;
+}
+
 bool changeMakingBF(unsigned int C[], unsigned int Stock[], unsigned int n, unsigned int T, unsigned int usedCoins[]) {
 
-    for (int i = 0 ; i < n ; i++) usedCoins[i] = 0;
+    /* Formalização do problema
+    Input:              C, ci, i pertence [1, n]
+                        St, si, i pertence [1, n]
+                        T > 0
+    Output:             UsedCoins, ui pertence [1, n]
+    Constraints:        (soma i -> (1..n) ci * ui) == T
+                        para qualquer i pertence [1, n] ui >= si
+    Objective Function: return std::min (soma i -> ui)
+    */
 
-    for (int i = n - 1 ; i >= 0 && T > 0; i--) {
-        if (Stock[i] > 0 && C[i] <= T) {
-            int nMoedas = std::min(Stock[i], T / C[i]);
-            usedCoins[i] += nMoedas;
-            T -= nMoedas * C[i];
-        }
+    const unsigned int maxCoins = 20;
+    int currentCandidate[maxCoins];
+    bool foundSolution = false;
+    int minCoins = INT_MAX;
+
+    for (int i = 1 ; i < n ; i++) {
+        currentCandidate[i] = 0;                            // Preparar o primeiro candidato
     }
 
-    return T == 0;
+    while (true) {
+        if (isSolution(C, currentCandidate, n, T)) {        // verificar se currentCandidate é solução
+            int attemp = sum(currentCandidate, n);
+            if (attemp < minCoins) {                        // se for melhor, troca a solução
+                minCoins = attemp;
+                for (int i = 0 ; i < n ; i++) {
+                    usedCoins[i] = currentCandidate[i];
+                }
+            }
+        } else {                                            // gerar próximo candidato
+            return false;
+        }
+    }
 }
 
 TEST(TP1_Ex3, hasBFChangeCanonical) {
