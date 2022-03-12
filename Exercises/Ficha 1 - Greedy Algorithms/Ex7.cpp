@@ -18,7 +18,7 @@ double minimumAverageCompletionTime(std::vector<unsigned int> tasks, std::vector
      *
      * Para qualquer i da lista, t(i+1) > t(i), logo a solução ótima é quando a lista está ordenada
      */
-    
+
     sort(tasks.begin(), tasks.end());
     int total = 0;
     int currentTime = 0;

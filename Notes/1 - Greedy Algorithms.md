@@ -78,3 +78,11 @@ vector<Activity> getNonOverlappingActivities(const vector<Activity> &content) {
 }
 `````
 
+### 3 - Formalização de um problema:
+
+Deve seguir estes critérios:
+
+1. Descrição do input;
+2. Descrição do output;
+3. Descrição das restrições (constraints);
+4. Descrição da função objectivo (objective function);
