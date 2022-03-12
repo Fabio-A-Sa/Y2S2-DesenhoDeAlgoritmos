@@ -9,6 +9,16 @@
 
 double minimumAverageCompletionTime(std::vector<unsigned int> tasks, std::vector<unsigned int> &orderedTasks) {
 
+    /* Formalização do problema
+     *
+     * Input: taskSet = {t1, t2, t3, ..., tn}, n >= 0
+     * Output: taskList, para qualquer ti a pertencer a TaskSet, existe pelo menos um j pertencente a [1, n] tal que taskList = i
+     * Constraints: para qualquer i pertencente a [i, n]
+     * Objective function: std::min (soma(i -> soma(j -> t[tasklist[j]])))
+     *
+     * Para qualquer i da lista, t(i+1) > t(i), logo a solução ótima é quando a lista está ordenada
+     */
+    
     sort(tasks.begin(), tasks.end());
     int total = 0;
     int currentTime = 0;
