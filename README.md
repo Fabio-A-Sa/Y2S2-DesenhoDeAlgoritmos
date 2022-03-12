@@ -23,7 +23,11 @@ Notes that I take during theoretical lectures, in Cpp files or Markdown <br>
 Varied exercises of easy, medium and difficult level, about the subject taught in the present week. They complement the weekly work developed during the practical classes. <br>
 
 ### Projects
-Soon
+
+With:
+- [x] Francisco João Gonçalves Calado Araújo
+- [x] Fábio Araújo de Sá
+- [x] Marcos William Ferreira Pinto
 
 **@ Fábio Araújo de Sá** <br>
 **2021/2022**
