@@ -77,3 +77,17 @@ void rouba(int n, int m) {
     } cout << endl;
 }
 ```
+
+### Exemplo 2: O ladrão com a mochila
+
+Dá para fazer da forma recursiva tradicional, gastando memória da stack em chamadas recursivas e recalculando várias vezes o mesmo valor:
+
+```c++
+
+```
+
+Método segundo a programação dinâmica: utilização de duas variáveis auxiliares e nenhuma chamada recursiva:
+
+```c++
+
+```

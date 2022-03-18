@@ -71,7 +71,11 @@ int main () {
     cout << "Second example: ladrão e as caixas" << endl;
     //rouba(10, 4);
 
+    cout << "Third example: fibonacci numbers" << endl;
+    cout << fib1(5) << endl;
+    cout << fib2(5) << endl;
 
+    cout << "Fourth example: ladrão e as caixas" << endl;
 
     return 0;
 }
