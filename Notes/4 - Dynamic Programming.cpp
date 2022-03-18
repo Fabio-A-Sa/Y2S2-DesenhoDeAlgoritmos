@@ -65,13 +65,13 @@ int fib1(int n) {
     switch (n) {
         case 0: return 0;
         case 1: return 1;
-        default: return fib(n-1) + fib(n-2);
+        default: return fib1(n-1) + fib1(n-2);
     }
 }
 
 int fib2(int n) {
-    int a=1 b=0;
-    for ( int i = 1 ; i <= n ; i++) {
+    int a=1, b=0;
+    for (int i = 1 ; i <= n ; i++) {
         int t = a;
         a = b;
         b += t;
@@ -90,10 +90,10 @@ int main () {
     //rouba(10, 4);
 
     cout << "Third example: fibonacci numbers" << endl;
-    cout << fib1(5) << endl;
-    cout << fib2(5) << endl;
+    cout << fib1(10) << endl;
+    cout << fib2(10) << endl;
 
-    cout << "Fourth example: ladrão e as caixas" << endl;
+    cout << "Fourth example: " << endl;
 
     return 0;
 }
