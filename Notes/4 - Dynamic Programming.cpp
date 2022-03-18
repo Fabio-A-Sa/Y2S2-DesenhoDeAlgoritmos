@@ -36,31 +36,6 @@ long combinations3(int n, int k) {
     return c[maxj];
 }
 
-/*
-void rouba(int n, int m) {
-
-    int f[m+1] = {0};
-    int g[m+1] = {0};
-    int s[m+1] = {0};
-
-    for (int i = 1 ; i <= n ; i++) {
-        for (int k = s[i] ; k <= m ; k++) {
-            if (g[i] + f[k-s[i]] > f[k]) {
-                f[k] = g[i] + f[k-s[i]];
-                g[k] = i;
-            }
-        }
-    }
-
-    for (int i = 1 ; i <= m ; i++) {
-        cout << f[i] << " ";
-    } cout << endl;
-    for (int i = 1 ; i <= m ; i++) {
-        cout << g[i] << " ";
-    } cout << endl;
-}
- */
-
 int fib1(int n) {
     switch (n) {
         case 0: return 0;
@@ -86,14 +61,9 @@ int main () {
     cout << combinations2(5, 2) << endl;
     cout << combinations3(5, 2) << endl;
 
-    cout << "Second example: ladrão e as caixas" << endl;
-    //rouba(10, 4);
-
     cout << "Third example: fibonacci numbers" << endl;
     cout << fib1(10) << endl;
     cout << fib2(10) << endl;
-
-    cout << "Fourth example: " << endl;
 
     return 0;
 }

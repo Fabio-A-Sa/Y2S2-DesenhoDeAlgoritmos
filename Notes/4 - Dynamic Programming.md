@@ -105,3 +105,34 @@ int fib(int n) {
     return b;
 }
 ```
+
+### Exemplo 4: Algoritmo de Bellman-Ford para grafos
+
+```c++
+bool bellmanFord(G, s) {
+    
+    for (int i = 1 ; i < G.nodes.size() ; i++) {
+        G.nodes[i].distance = INT_MAX;
+        G.nodes[i].path = nullptr;
+    }
+    
+    for (int i = 1 ; i < G.nodes.size() ; i++) {
+        for (int j = 0 ; j < G.nodes[i].adjacents ; j++) {
+            Edge currentEdge = G.nodes[i].adjacents[j];
+            if (currentEdge.w.distance > currentEdge.v.distance + currentEdge.distance) {
+                currentEdge.w.distance = currentEdge.v.distance + currentEdge.distance;
+                G.nodes[i].path = w;
+            }
+        }
+    }
+    
+    for (int i = 0 ; i < G.edges.size() ; i++) {
+        Edge currentEdge = G.edges[i];
+        if (currentEdge.destiny.distance + currentEdge.distance < currentEdge.origin, distance) {
+            cerr << "there are cycles of negative weight" << endl;
+            return false;
+        }
+    }
+    return true;
+}
+```
