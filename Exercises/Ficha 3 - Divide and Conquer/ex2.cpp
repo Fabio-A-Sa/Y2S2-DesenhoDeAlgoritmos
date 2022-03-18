@@ -1,3 +1,6 @@
+// Created on March, 2022
+// @author: Fábio Araújo de Sá
+
 #include "exercises.h"
 
 int max (int a, int b) {
