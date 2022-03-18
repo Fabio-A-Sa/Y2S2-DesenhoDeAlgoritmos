@@ -9,7 +9,7 @@ A forma recursiva de combinações gasta a maior parte do tempo a calcular valor
 ```c++
 long combinations(int n, int k) {
     if (k == 0 || k == n) {
-        return 1
+        return 1;
     } else {
         return combinations(n-1, k) + combinations(n-1, k-1);
     }
@@ -22,7 +22,7 @@ Outra resolução, usando para isso memorização (*memoization*) poupando tempo
 long combinations(int n, int k) {
     static long memory[100][100];       // considerando somente n <= 99
     if (memory[n][k] != 0) {
-        return memmory[n][k];
+        return memory[n][k];
     } else {
         long solution;
         if (k == 0 || k == n) {
@@ -83,7 +83,13 @@ void rouba(int n, int m) {
 Dá para fazer da forma recursiva tradicional, gastando memória da stack em chamadas recursivas e recalculando várias vezes o mesmo valor:
 
 ```c++
-
+int fib(int n) {
+    switch (n) {
+        case 0: return 0;
+        case 1: return 1;
+        default: return fib(n-1) + fib(n-2);
+    }
+}
 ```
 
 Método segundo a programação dinâmica: utilização de duas variáveis auxiliares e nenhuma chamada recursiva:
