@@ -78,7 +78,7 @@ void rouba(int n, int m) {
 }
 ```
 
-### Exemplo 2: O ladrão com a mochila
+### Exemplo 3: Sequência de Fibonacci
 
 Dá para fazer da forma recursiva tradicional, gastando memória da stack em chamadas recursivas e recalculando várias vezes o mesmo valor:
 
@@ -95,5 +95,13 @@ int fib(int n) {
 Método segundo a programação dinâmica: utilização de duas variáveis auxiliares e nenhuma chamada recursiva:
 
 ```c++
-
+int fib(int n) {
+    int a=1 b=0;
+    for ( int i = 1 ; i <= n ; i++) { 
+        int t = a; 
+        a = b; 
+        b += t;
+    } 
+    return b;
+}
 ```
