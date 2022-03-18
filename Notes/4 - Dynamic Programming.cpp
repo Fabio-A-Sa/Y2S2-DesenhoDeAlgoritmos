@@ -61,6 +61,24 @@ void rouba(int n, int m) {
 }
  */
 
+int fib1(int n) {
+    switch (n) {
+        case 0: return 0;
+        case 1: return 1;
+        default: return fib(n-1) + fib(n-2);
+    }
+}
+
+int fib2(int n) {
+    int a=1 b=0;
+    for ( int i = 1 ; i <= n ; i++) {
+        int t = a;
+        a = b;
+        b += t;
+    }
+    return b;
+}
+
 int main () {
 
     cout << "First example: nCk combinations" << endl;
