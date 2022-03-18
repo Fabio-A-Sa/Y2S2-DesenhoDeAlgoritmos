@@ -1,3 +1,6 @@
+// Created on March, 2022
+// @author: Fábio Araújo de Sá
+
 #include "../../../Downloads/TP2a-2/exercises.h"
 
 Sudoku::Sudoku() {
@@ -105,7 +108,6 @@ void Sudoku::clear() {
                 clear(i, j);
 }
 
-/// TESTS ///
 #include <gtest/gtest.h>
 
 void compareSudokus(int in[9][9], int out[9][9]) {
