@@ -16,8 +16,38 @@ long combinations(int n, int k) {
 }
 ```
 
-Outra resolução, usando para isso programação dinâmica (poupando recursos, tanto tempo como espaço):
+Outra resolução, usando para isso memorização (*memoization*) poupando tempo:
 
 ```c++
-
+long combinations(int n, int k) {
+    static long memory[100][100];       // considerando somente n <= 99
+    if (memory[n][k] != 0) {
+        return memmory[n][k];
+    } else {
+        long solution;
+        if (k == 0 || k == n) {
+            solution = 1;
+        } else {
+            solution = combination(n-1, k) + combinations(n-1, k-1);
+        }
+        memory[n][k] = solution;
+        return solution;
+    }
+}
 ```
+
+Outra resolução, usando para isso programação dinâmica, poupando tempo e poupando chamadas recursivas / espaço na stack:
+
+```c++
+long combinations(int n, int k) {
+    int maxj = n - k;
+    long c[1 + maxj];
+    for (int j = 0; j <= maxj; j++)
+        c[j] = 1;
+    for (int i = 1; i <= k; i++)
+        for (int j = 1; j <= maxj; j++)
+            c[j] += c[j-1];
+    return c[maxj];
+}
+```
+
