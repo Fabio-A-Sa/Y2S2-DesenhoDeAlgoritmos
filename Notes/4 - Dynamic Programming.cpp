@@ -56,12 +56,12 @@ int fib2(int n) {
 
 int main () {
 
-    cout << "First example: nCk combinations" << endl;
+    cout << "nCk combinations" << endl;
     cout << combinations1(5, 2) << endl;
     cout << combinations2(5, 2) << endl;
     cout << combinations3(5, 2) << endl;
 
-    cout << "Third example: fibonacci numbers" << endl;
+    cout << "Fibonacci numbers" << endl;
     cout << fib1(10) << endl;
     cout << fib2(10) << endl;
 
