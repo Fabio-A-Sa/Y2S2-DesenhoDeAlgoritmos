@@ -1,3 +1,6 @@
+// Created on March, 2022
+// @author: Fábio Araújo de Sá
+
 #include "exercises.h"
 
 Labyrinth::Labyrinth(int values[10][10]) {
@@ -67,11 +70,10 @@ void Labyrinth::initializeVisited() {
             visited[i][j] = false;
 }
 
-/// TESTS ///
 #include <gtest/gtest.h>
 
 TEST(TP2_Ex1, testLabyrinthPossible) {
-    // This test assumes that the mazes only have a possible path to the exit
+
     int lab1[10][10] ={
         {0,0,0,0,0,0,0,0,0,0},
         {0,1,1,1,1,1,0,1,0,0},
