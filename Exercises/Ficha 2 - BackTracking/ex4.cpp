@@ -1,3 +1,6 @@
+// Created on March, 2022
+// @author: Fábio Araújo de Sá
+
 #include "exercises.h"
 
 bool Activity::operator==(const Activity &a2) const {
@@ -9,13 +12,9 @@ bool Activity::overlaps(const Activity &a2) const {
 }
 
 std::vector<Activity> activitySelectionBacktracking(std::vector<Activity> A) {
-
-
-
     return A;
 }
 
-/// TESTS ///
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 
