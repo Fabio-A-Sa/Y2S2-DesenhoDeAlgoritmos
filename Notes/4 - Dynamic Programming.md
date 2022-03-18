@@ -51,3 +51,29 @@ long combinations(int n, int k) {
 }
 ```
 
+### Exemplo 2: O ladrão com a mochila
+
+```c++
+void rouba(int n, int m) {
+    
+    int f[m+1] = {0};
+    int g[m+1] = {0};
+    int s[m+1] = {0};
+    
+    for (int i = 1 ; i <= n ; i++) {
+        for (int k = s[i] ; k <= m ; k++) {
+            if (v[i] + f[k-s[i]] > f[k]) {
+                f[k] = v[i] + f[k-s[i]];
+                g[k] = i;
+            }
+        }
+    }
+    
+    for (int i = 1 ; i <= m ; i++) {
+        cout << f[i] << " ";
+    } cout << endl;
+    for (int i = 1 ; i <= m ; i++) {
+        cout << g[i] << " ";
+    } cout << endl;
+}
+```
