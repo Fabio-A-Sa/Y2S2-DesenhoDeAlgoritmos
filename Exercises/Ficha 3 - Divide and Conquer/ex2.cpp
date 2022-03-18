@@ -37,9 +37,7 @@ int aux(int a[], int n) {
 }
 
 int maxSubsequenceDC(int A[], unsigned int n, int &i, int &j) {
-
-
-
+    
 	return 0;
 
     /**
