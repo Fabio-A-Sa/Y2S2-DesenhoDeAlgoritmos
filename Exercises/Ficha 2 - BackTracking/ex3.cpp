@@ -1,3 +1,6 @@
+// Created on March, 2022
+// @author: Fábio Araújo de Sá
+
 #include "exercises.h"
 
 bool changeMakingBacktracking(unsigned int C[], unsigned int Stock[], unsigned int n, unsigned int T, unsigned int usedCoins[]) {
@@ -13,7 +16,6 @@ bool changeMakingBacktracking(unsigned int C[], unsigned int Stock[], unsigned i
      */
 }
 
-/// TESTS ///
 #include <gtest/gtest.h>
 
 TEST(TP2_Ex3, hasBFChangeCanonical) {
