@@ -1,6 +1,6 @@
 # 1 - Algoritmos Gananciosos (*greedy*)
 
-Quando o algoritmo aplica uma heuristica para obter a solução mais favorável, ou seja, o conjunto de subproblemas em que há uma escolha ótima local. Muito usado em problemas de otimização. As cinco premissas que suportam a solução: <br>
+Quando o algoritmo aplica uma heuristica para obter a solução mais favorável ou uma boa aproximação desta, ou seja, o conjunto de subproblemas em que há uma escolha ótima local. Muito usado em problemas de otimização. As cinco premissas que suportam a solução: <br>
 
 - [x] Conjunto de candidatos, de onde se escolhe a solução;
 - [x] Função de seleção que escolhe o melhor candidato;
