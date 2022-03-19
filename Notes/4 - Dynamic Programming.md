@@ -1,6 +1,6 @@
 # 4 - Programação dinâmica (*dynamic programming*)
 
-Técnica que permite resolver problemas típicos de recursão economizando tempo, gastando memória, e numa segunda abordagem minimizando o uso dessa mesma memória resolvendo os subproblemas parciais da base (*bottom-up*).
+Técnica que permite resolver problemas típicos de recursão economizando tempo, gastando memória, e numa segunda abordagem minimizando o uso dessa mesma memória resolvendo os subproblemas parciais da base (*bottom-up*). A técnica passa por introduzir uma progressão iterativa de transformações sucessivas de um espaço linear de soluções.
 
 ### Exemplo 1: nCk, combinações
 
