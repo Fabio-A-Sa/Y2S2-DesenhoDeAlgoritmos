@@ -111,6 +111,44 @@ void Mergesort(int A[], int p, int q, int r, int threads) {
         Merge(A, p, q, r);
     }
 }
+
+void merge_arrays(const int a[], int na, const int b[], int nb, int c[]) {
+
+    /**
+     * indexA <- representa o index do valor atualmente em comparação para o vector a
+     * indexB <- representa o index do valor atualmente em comparação para o vector b
+     * indexC <- representa o index do valor a ser colocado no vector c
+     */
+    int indexA = 0, indexB = 0, indexC = 0;
+
+    // este ciclo termina quando todos os elementos de um dos vectores (a ou b) forem visitados
+    // ou seja, quando o index a comparar é igual ao tamanho do próprio array
+    while (indexA < na && indexB < nb) {
+
+        // em C, coloca-se o mínimo entre os dois valores a comparar (porque é ordem decrescente)
+        c[indexC] = min(a[indexA], b[indexB]);
+        indexC++; // e passa a apontar para o próximo valor a colocar
+
+        if (a[indexA] > b[indexB]) {    // se foi colocado um elemento do vector B
+             indexB++;                  // então passa a apontar para o seguinte elemento do vector B
+        } else indexA++;                // senão, passa a apontar para o seguinte elemento do vector A
+    }
+
+    if (indexA == na) {                 // se foi o vector A que acabou
+        
+        while (indexB != nb) {          // colocar o resto dos valores de B em C, por ordem
+            c[indexC] = b[indexB];
+            indexC++; indexB++;
+        }
+
+    } else {                            // se foi o vector B que acabou
+
+        while (indexA != na) {          // colocar o resto dos valores de A em C, por ordem
+            c[indexC] = a[indexA];
+            indexC++; indexA++;
+        }
+    }
+}
 ```
 
 Nota: [=] significa que o corpo da função pode usar por cópia todas as variáveis locais da função que insere.
