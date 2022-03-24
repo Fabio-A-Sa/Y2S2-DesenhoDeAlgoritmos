@@ -9,8 +9,8 @@ Técnica que permite resolver problemas típicos de recursão economizando tempo
 - Desvantagens: mais naive; continua com o problema da recursividade; ocupa espaço na stack, pois guarda o endereço de retorno;
 
 `2. Bottom-Up (Tabulation)`, encontra todas as soluções parciais (começando nos casos de base) e com eles calcula a solução pedida.
-- Vantagens: mais cá
-- Desvantagens:
+- Vantagens: mais cálculos necessários; é necessário definir uma ordem dos cálculos para ir da base até aos passos mais dependentes; maior dificuldade de implementação; mais difícl de otimizar o espaço e o tempo;
+- Desvantagens: utilização do método space saving tree, pois às vezes dá para passar de uma matriz 2D para uma matriz 1D, poupando assim espaço;
 
 ### Exemplo 1: nCk, combinações
 
