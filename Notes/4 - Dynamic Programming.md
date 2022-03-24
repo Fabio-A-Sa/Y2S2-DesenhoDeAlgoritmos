@@ -5,11 +5,11 @@ Técnica que permite resolver problemas típicos de recursão economizando tempo
 ## Técnicas de Programação dinâmica
 
 `1. Top Down (Memoization)`, recursão até ao caso base, onde podemos usar uma matriz de memorização de tamanho máximo N*N, sendo N o maior valor de input possível, para que não haja tantos cálculos ou chamadas recursivas. É um algoritmo lazy, só calcula um valor quando necessita. 
-- Vantagens:
-- Desvantagens:
+- Vantagens: do problema em papel para o código é mais simples de implementar; poupa memória e número de cálculos; mais fácil de entender;
+- Desvantagens: mais naive; continua com o problema da recursividade; ocupa espaço na stack, pois guarda o endereço de retorno;
 
-`2. Bottom-Up (Tabulation)`
-- Vantagens:
+`2. Bottom-Up (Tabulation)`, encontra todas as soluções parciais (começando nos casos de base) e com eles calcula a solução pedida.
+- Vantagens: mais cá
 - Desvantagens:
 
 ### Exemplo 1: nCk, combinações
