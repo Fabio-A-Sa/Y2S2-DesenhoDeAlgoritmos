@@ -10,6 +10,8 @@
 
 ## Atividades
 
+Com S (start) e T (terminal) e os seguintes nós, ordenar as atividades pelas seguintes precedência:
+
 | Activity | Duration | Pre Activity |
 |----------|----------|--------------|
 | A        | 3        | -            |
@@ -22,3 +24,6 @@
 
 1. Criação de um diagrama (grafo) chamado nó-atividade, de acordo com as precedências das atividades;
 2. Utilizar o algoritmo de ordenação topológica dado em AED no semestre passado;
+3. Colocação de um atributo `grau` de todos os nós a zero no início do algoritmo;
+4. Sempre que o algoritmo encontrar um nó diferente, `grau++`;
+5. No final, deveremos obter com recurso a uma fila, a seguinte ordem: S, A, D, B, E, G, C, F, T;
