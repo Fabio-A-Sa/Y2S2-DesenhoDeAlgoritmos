@@ -10,3 +10,13 @@
 
 ## Atividades
 
+| Activity | Duration | Pre Activity |
+|----------|----------|--------------|
+| A        | 3        | -            |
+| B        | 3        | A            |
+| C        | 2        | B, E         |
+| D        | 5        | -            |
+| E        | 3        | D            |
+| F        | 3        | B, E, G      |
+| G        | 2        | D            |
+
