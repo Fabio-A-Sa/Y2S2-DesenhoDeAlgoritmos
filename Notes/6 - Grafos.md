@@ -20,3 +20,5 @@
 | F        | 3        | B, E, G      |
 | G        | 2        | D            |
 
+1. Criação de um diagrama (grafo) chamado nó-atividade, de acordo com as precedências das atividades;
+2. Utilizar o algoritmo de ordenação topológica dado em AED no semestre passado;
