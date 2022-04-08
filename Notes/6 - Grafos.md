@@ -27,3 +27,4 @@ Com S (start) e T (terminal) e os seguintes nós, ordenar as atividades pelas se
 3. Colocação de um atributo `grau` de todos os nós a zero no início do algoritmo;
 4. Sempre que o algoritmo encontrar um nó diferente, `grau++`;
 5. No final, deveremos obter com recurso a uma fila, a seguinte ordem: S, A, D, B, E, G, C, F, T;
+
