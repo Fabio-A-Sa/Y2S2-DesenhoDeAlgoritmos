@@ -16,4 +16,5 @@ cf(v2, v1) = 100                            // neste caso anula a capacidade da 
 abs(f) = 109                                // fluxo máximo do sistema
 ```
 
-A solução ótima é garantida quando não existem caminhos de aumento no grafo residual
+A solução ótima é garantida quando não existem caminhos de aumento no grafo residual. <br>
+O fluxo máximo da rede é igual ao corte mínimo no grafo de capacidade.
