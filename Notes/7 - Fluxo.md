@@ -7,7 +7,7 @@ O grafo usado tem em cada aresta a capacidade e o fluxo usado no momento, em for
 Algumas definições:
 
 ```c++
-f(v1, v2) = 100  #                          // fluxo
+f(v1, v2) = 100                             // fluxo
 c(v1, v2) = 100                             // capacidade
 cf(v1, v2) = c(v1, v2) - f(v1, v2) = 0      // capacidade residual
 f(v2, v1) = -f(v1, v2) = -100               // fluxo
