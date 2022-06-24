@@ -38,5 +38,26 @@ With:
 - [x] Fábio Araújo de Sá
 - [x] Marcos William Ferreira Pinto
 
+### Project 2 - Logistics for Travel Organization (Grade: 19.3/20)
+
+A travel agency wants to organize routes and connections for its customers in the best possible way. For this you need different features:
+
+1. Groups without separation:
+  - Maximization of the number of elements of the group to be transported;
+  - Minimization of the number of transfers of the trip;
+
+2. Split groups:
+  - Determine a referral for a group;
+  - Change an existing route if the group size increases;
+  - Determine the maximum size of a group and a forwarding;
+  - Determining when the full group would meet again at the destination;
+  - Determine the maximum waiting time that group members can wait at intermediate stops;
+
+The following project implements solutions for each of the cases using some studied algorithms. The original repository can be viewed [here](https://github.com/marcwferreira/FEUP_DA_travel_agency).
+
+With:
+- [x] Fábio Araújo de Sá
+- [x] Marcos William Ferreira Pinto
+
 **@ Fábio Araújo de Sá** <br>
 **2021/2022**
