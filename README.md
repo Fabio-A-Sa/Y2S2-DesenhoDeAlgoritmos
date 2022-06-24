@@ -27,7 +27,7 @@ Varied exercises of easy, medium and difficult level, about the subject taught i
 A delivery company wants to see its business maximized according to the following scenarios:
 
 - Optimization of the number of couriers;
-- Optimization of the company's profit by delivering orders using lower cost vans;
+- Optimization of the company's profit bgity delivering orders using lower cost vans;
 - Optimization of express deliveries, improving average delivery time;
 
 The following project implements solutions for each of the cases using some studied algorithms, such as greedy, bin-packing, knapsack and job scheduling. <br>
