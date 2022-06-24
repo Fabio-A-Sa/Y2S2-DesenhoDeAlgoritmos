@@ -38,6 +38,7 @@ The original repository can be viewed [here](https://github.com/marcwferreira/DA
 In addition to the C++ language, we also use Python and Bash to assess the complexity of the algorithms. We built a script ([packagesGenerator.py](https://github.com/Fabio-A-Sa/Y2S2-DesenhoDeAlgoritmos/blob/f3c95ae412b0470d87595489dab075c960c00c6b/Project%201/codigo/AvaliacaoEmpirica/packagesGenerator.py)) that generates N orders based on the original data provided by the teachers, ensuring that a percentage are express orders. Then the project script is called via a Bash script, which injects the orders file and the necessary parameters into a `caseX.sh`, returning the time in seconds of each execution to the `output.csv` file. The cycle is repeated 10 times in increments of 2000 units for each case. The advantage of `.csv` is that it can be interpreted by Excel and that's where we were able to build a graph, with regression lines to evaluate the linearity of each case.
 
 #### With:
+
 - [x] Francisco João Gonçalves Calado Araújo
 - [x] Fábio Araújo de Sá
 - [x] Marcos William Ferreira Pinto
@@ -59,7 +60,16 @@ A travel agency wants to organize routes and connections for its customers in th
 
 The following project implements solutions for each of the cases using some studied algorithms. The original repository can be viewed [here](https://github.com/marcwferreira/FEUP_DA_travel_agency).
 
-With:
+#### Empirical evaluation
+
+In addition to the C++ language, we also use Python and Bash to assess the complexity of the algorithms. We built a script ([graphGenerator.py](https://github.com/Fabio-A-Sa/Y2S2-DesenhoDeAlgoritmos/blob/main/Project%202/codigo/AvaliaçãoEmp%C3%ADrica/graphGenerator.py)) that generates a DAG graph with N nodes and N * FACTOR edges, which are based on the original data provided by the teachers, ensuring time and cost bounds. Then the project script is called via a Bash script, which injects the orders file and the necessary parameters into a `timer.sh`, returning the time in seconds of each execution to the `output.csv` file. For some cases we vary the number of nodes (and consequently the size of the graph) with increments of 1000 for 10 cycles. In other cases, we vary the number of people traveling and the necessary paths with increments of 10 for 10 cicles. The advantage of `.csv` is that it can be interpreted by Excel and that's where we were able to build a graph, with regression lines to evaluate the linearity of each case.
+
+#### Testing
+
+
+
+#### With:
+
 - [x] Fábio Araújo de Sá
 - [x] Marcos William Ferreira Pinto
 
