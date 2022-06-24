@@ -22,7 +22,16 @@ Notes that I take during theoretical lectures, in Cpp files or Markdown <br>
 ### Exercises
 Varied exercises of easy, medium and difficult level, about the subject taught in the present week. They complement the weekly work developed during the practical classes. <br>
 
-### Projects
+### Project 1 - Urban Logistics for Packages Delivery (Grade: 18.5/20)
+
+A delivery company wants to see its business maximized according to the following scenarios:
+
+- Optimization of the number of couriers;
+- Optimization of the company's profit by delivering orders using lower cost vans;
+- Optimization of express deliveries, improving average delivery time;
+
+The following project implements solutions for each of the cases using some studied algorithms, such as greedy, bin-packing, knapsack and job scheduling.
+The original repository can be viewed [here](https://github.com/marcwferreira/DA_estafetas).
 
 With:
 - [x] Francisco João Gonçalves Calado Araújo
