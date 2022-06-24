@@ -1,0 +1,51 @@
+\hypertarget{_utils_8h_source}{}\doxysection{Utils.\+h}
+\mbox{\hyperlink{_utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef UTILS\_H}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define UTILS\_H}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define INF (INT\_MAX/2)}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_edge}{Edge}} \{}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_edge_ad7df434ff7710e69f28bb31e91a35f82}{dest}};}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{40     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_edge_ad606e57bc68898672de1727e299a7d65}{capacity}};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_edge_a09af15a1add33827faa010251d24f1b8}{duration}};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_edge_ac23a4c3f7141cf8c1deb164ae30be4fd}{visit}};}
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{56 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_node}{Node}} \{}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{61     list<Edge> \mbox{\hyperlink{struct_node_a203e0f6abcda09725ae96c8dc769a50f}{adjacent}};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_node_aa1bdec4e775fc578632e6a2dced9e251}{visited}};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_node_a122e2ce83616f32faa022223be3f50ab}{parent}};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_node_a158c14e88449bfe6cf247a538c2f74e9}{capacity}};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{81     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_node_a1474874615ed5d5662c8170d4cf22f00}{earliestStart}};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_node_a40888a559fd9e7bc930652327e5f87c9}{earliestArrival}};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{91     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_node_a76361813be04f6f0951b27dfcb4f2324}{degreeE}};}
+\DoxyCodeLine{92 \};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{102 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_utils_8h_ae9d5709cac8252f81617f482c8546c40}{readGivenPaths}}(vector<vector<int>> *paths, \textcolor{keywordtype}{int} *groupSize);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UTILS\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

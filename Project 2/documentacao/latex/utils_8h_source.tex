@@ -1,0 +1,31 @@
+\hypertarget{utils_8h_source}{}\doxysection{utils.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef UTILS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define UTILS\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define INF (INT\_MAX/2)}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{14 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_edge}{Edge}} \{}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} dest;}
+\DoxyCodeLine{20     }
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} capacity;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} duration;}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_node}{Node}} \{}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{40     std::list<Edge> adjacent;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} visited;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{int} parent;}
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UTILS\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

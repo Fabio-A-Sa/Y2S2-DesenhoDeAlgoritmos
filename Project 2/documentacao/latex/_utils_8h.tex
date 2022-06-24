@@ -1,0 +1,75 @@
+\hypertarget{_utils_8h}{}\doxysection{Utils.\+h File Reference}
+\label{_utils_8h}\index{Utils.h@{Utils.h}}
+
+
+This file contains the definition of nodes, edges and a fuction to read a graph file.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_edge}{Edge}}
+\item 
+struct \mbox{\hyperlink{struct_node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF}}~(INT\+\_\+\+MAX/2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_utils_8h_ae9d5709cac8252f81617f482c8546c40}{read\+Given\+Paths}} (vector$<$ vector$<$ int $>$ $>$ $\ast$paths, int $\ast$group\+Size)
+\begin{DoxyCompactList}\small\item\em Function that reads a file and gathers information about travel paths and the total capacity of the routes together. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of nodes, edges and a fuction to read a graph file. 
+
+\begin{DoxyAuthor}{Author}
+Fábio Araújo de Sá, Marcos William Ferreira Pinto
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/05/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_utils_8h_a12c2040f25d8e3a7b9e1c2024c618cb6}\label{_utils_8h_a12c2040f25d8e3a7b9e1c2024c618cb6}} 
+\index{Utils.h@{Utils.h}!INF@{INF}}
+\index{INF@{INF}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{INF}{INF}}
+{\footnotesize\ttfamily \#define INF~(INT\+\_\+\+MAX/2)}
+
+Definition of the largest number used in class bellow 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_utils_8h_ae9d5709cac8252f81617f482c8546c40}\label{_utils_8h_ae9d5709cac8252f81617f482c8546c40}} 
+\index{Utils.h@{Utils.h}!readGivenPaths@{readGivenPaths}}
+\index{readGivenPaths@{readGivenPaths}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{readGivenPaths()}{readGivenPaths()}}
+{\footnotesize\ttfamily bool read\+Given\+Paths (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$ $\ast$}]{paths,  }\item[{int $\ast$}]{group\+Size }\end{DoxyParamCaption})}
+
+
+
+Function that reads a file and gathers information about travel paths and the total capacity of the routes together. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paths} & -\/ a vector which contains different travel routes (to be populated) \\
+\hline
+{\em group\+Size} & -\/ an integer value representing the desired group size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ if an error occurs 
+
+false -\/ otherwise 
+\end{DoxyReturn}

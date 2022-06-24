@@ -1,0 +1,428 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}} ()
+\item 
+void \mbox{\hyperlink{class_graph_aeea3f2b7642feafffed0902239447a71}{initialize}} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em Function that initializes the graph with the given file\textquotesingle{}s information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a2f33a0e2669fec1f778e63e2a38a7441}{case1}} (int mode, int origin, int destiny)
+\begin{DoxyCompactList}\small\item\em Function that verifies is input is valid for the graph (origin and destination) and call the correct option for case 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a16ba7b4a0842635a45bedeb804604944}{case2}} (int mode, int origin, int destiny, int group\+Size=0)
+\begin{DoxyCompactList}\small\item\em Function that verifies is input is valid for the graph (origin and destination) and call the correct option for case 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_graph_a9c2b6eadcdcd8e2b0ff280fe00a83a63}{add\+Edge}} (int origin, int destiny, int capacity, int duration)
+\begin{DoxyCompactList}\small\item\em Function that adds an \mbox{\hyperlink{struct_edge}{Edge}} between two nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_a68f211a37b40067115fc6274d46153ed}\label{class_graph_a68f211a37b40067115fc6274d46153ed}} 
+void {\bfseries reset} ()
+\begin{DoxyCompactList}\small\item\em Function that put all attributes for all nodes to default values. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_ac9089828080b78f7653ce83976446029}{is\+Valid}} (int node)
+\begin{DoxyCompactList}\small\item\em Function that determines if node is valid in current graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_ae02e2d9fa09adf2cb37750f47dc949ba}{show\+Path\+Case1}} (int origin, int destiny)
+\begin{DoxyCompactList}\small\item\em Function that prints a path from the origin to destination for case 1. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_a62dc0371ad4c7f6a58e010482633ee56}{show\+Path\+Case2}} (const vector$<$ vector$<$ int $>$ $>$ \&path\+List, vector$<$ int $>$ \&capacities)
+\begin{DoxyCompactList}\small\item\em Function that prints a path from the origin to destination for case 2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a3f8a497ab18263838277d18c736d16e7}{case1\+\_\+a}} (int origin, int destiny)
+\begin{DoxyCompactList}\small\item\em Function that calculates the largest group size and the path for it without dividing the group into subgroups with diferrent paths. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a04bd8dd496a7f565b6c30e967a8ace18}{case1\+\_\+b}} (int origin, int destiny)
+\begin{DoxyCompactList}\small\item\em Function that calculates the path that allows for the largest group size and the least number of bus changes (prints both routes) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a0515c45d0f818bf21ed88c4528fe4077}{case2\+\_\+a}} (int origin, int destiny, int group\+Size)
+\begin{DoxyCompactList}\small\item\em Function that finds travel routes for a group, allowing division into subgroups with different paths. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a869d3d6616adf0d0fa8ce575c2faa893}{case2\+\_\+b}} (int origin, int destiny, vector$<$ vector$<$ int $>$ $>$ path\+List, int old\+Group\+Size, int new\+Group\+Size)
+\begin{DoxyCompactList}\small\item\em Function that receives travel routes and the group size for it, then corrects the routes to accommodate for a different group size (if new group size is smaller or the same as before it returns the existing paths) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a73d0a5660aba580b3ff020a6eb9a19fd}{case2\+\_\+c}} (int origin, int destiny)
+\begin{DoxyCompactList}\small\item\em Function that calculates the largest group size and travel routes between origin and destination, allowing group to divide into different paths. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a39f44063eb9db9387514fe7d620d0d9e}{case2\+\_\+d}} (int origin, int destiny, vector$<$ vector$<$ int $>$ $>$ path\+List)
+\begin{DoxyCompactList}\small\item\em Function that calculates the minimum travel time for the arrival off the whole group to the end destination (taking into account the different paths traveled) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a7c3535f65c293623ab57a769c2c6ad4f}{case2\+\_\+e}} (int origin, int destiny, vector$<$ vector$<$ int $>$ $>$ path\+List)
+\begin{DoxyCompactList}\small\item\em Function that calculates all the waiting times (for subgroup that arrives first) between bus changes that occurs in the give travel routes considering that the whole group has to leave the station (node) at the same time. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_adeeb99f797431df6f44c1489f3113fe0}{BFS}} (int origin, int destiny)
+\begin{DoxyCompactList}\small\item\em Function that traverse the graph with a Breadth-\/\+First Search. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_a27868c0c4932b5a7634816e0a968e6e3}{path\+Build}} (int origin, int destiny, vector$<$ int $>$ \&path, int capacity)
+\begin{DoxyCompactList}\small\item\em Function creates a path between origin and destination (if it exists) using the stored information. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_a99922f91257adb8fbd354e31d3a3198c}{verify\+Found\+Path}} (vector$<$ vector$<$ int $>$ $>$ \&path\+List, vector$<$ int $>$ \&path, vector$<$ int $>$ \&capacities, int \&capacity, int remainder\+Size=\mbox{\hyperlink{_utils_8h_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF}})
+\begin{DoxyCompactList}\small\item\em Function that verifies is a path already exists, if it does instead of adding it again to travel routes List (path\+List) it increments the number of travelers in it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_a7a82fa07222b3d11275bc6af0759ef82}\label{class_graph_a7a82fa07222b3d11275bc6af0759ef82}} 
+void {\bfseries get\+Earliest\+Start} ()
+\begin{DoxyCompactList}\small\item\em Function that calculates the earliest start in all nodes that is in the travel routes (for this case the earliest departure in a group if we have to wait for the group to unite before leaving the node) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_af9aeeebc9a5397b984e07fbc01fe2014}\label{class_graph_af9aeeebc9a5397b984e07fbc01fe2014}} 
+void {\bfseries get\+Earliest\+Arrival} ()
+\begin{DoxyCompactList}\small\item\em Function that calculates the earliest arrival of a subgroup into a node (calculates for all nodes maked in the travel routes) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{struct_node}{Node}} $>$ \mbox{\hyperlink{class_graph_a71b5e16eb9e0670fea3ecee3526abb41}{nodes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents a \mbox{\hyperlink{class_graph}{Graph}} and its entire structure 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}\label{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Main constructor of the class \mbox{\hyperlink{class_graph}{Graph}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a9c2b6eadcdcd8e2b0ff280fe00a83a63}\label{class_graph_a9c2b6eadcdcd8e2b0ff280fe00a83a63}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destiny,  }\item[{int}]{capacity,  }\item[{int}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that adds an \mbox{\hyperlink{struct_edge}{Edge}} between two nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ an integer value representing the index of origin \mbox{\hyperlink{struct_node}{Node}} \\
+\hline
+{\em destiny} & -\/ an integer value representing the index of destiny \mbox{\hyperlink{struct_node}{Node}} \\
+\hline
+{\em capacity} & -\/ an integer value representing capacity of current \mbox{\hyperlink{struct_edge}{Edge}} \\
+\hline
+{\em duration} & -\/ an integer value representing duration of traveling to one node to another \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_adeeb99f797431df6f44c1489f3113fe0}\label{class_graph_adeeb99f797431df6f44c1489f3113fe0}} 
+\index{Graph@{Graph}!BFS@{BFS}}
+\index{BFS@{BFS}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{BFS()}{BFS()}}
+{\footnotesize\ttfamily int Graph\+::\+BFS (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destiny }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that traverse the graph with a Breadth-\/\+First Search. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ representing the maximum capacity of discovered path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a2f33a0e2669fec1f778e63e2a38a7441}\label{class_graph_a2f33a0e2669fec1f778e63e2a38a7441}} 
+\index{Graph@{Graph}!case1@{case1}}
+\index{case1@{case1}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{case1()}{case1()}}
+{\footnotesize\ttfamily void Graph\+::case1 (\begin{DoxyParamCaption}\item[{int}]{mode,  }\item[{int}]{origin,  }\item[{int}]{destiny }\end{DoxyParamCaption})}
+
+
+
+Function that verifies is input is valid for the graph (origin and destination) and call the correct option for case 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & -\/ an integer value representing the selected mode \\
+\hline
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a3f8a497ab18263838277d18c736d16e7}\label{class_graph_a3f8a497ab18263838277d18c736d16e7}} 
+\index{Graph@{Graph}!case1\_a@{case1\_a}}
+\index{case1\_a@{case1\_a}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{case1\_a()}{case1\_a()}}
+{\footnotesize\ttfamily void Graph\+::case1\+\_\+a (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destiny }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that calculates the largest group size and the path for it without dividing the group into subgroups with diferrent paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a04bd8dd496a7f565b6c30e967a8ace18}\label{class_graph_a04bd8dd496a7f565b6c30e967a8ace18}} 
+\index{Graph@{Graph}!case1\_b@{case1\_b}}
+\index{case1\_b@{case1\_b}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{case1\_b()}{case1\_b()}}
+{\footnotesize\ttfamily void Graph\+::case1\+\_\+b (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destiny }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that calculates the path that allows for the largest group size and the least number of bus changes (prints both routes) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a16ba7b4a0842635a45bedeb804604944}\label{class_graph_a16ba7b4a0842635a45bedeb804604944}} 
+\index{Graph@{Graph}!case2@{case2}}
+\index{case2@{case2}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{case2()}{case2()}}
+{\footnotesize\ttfamily void Graph\+::case2 (\begin{DoxyParamCaption}\item[{int}]{mode,  }\item[{int}]{origin,  }\item[{int}]{destiny,  }\item[{int}]{group\+Size = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Function that verifies is input is valid for the graph (origin and destination) and call the correct option for case 2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & -\/ an integer value representing the selected mode \\
+\hline
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+{\em group\+Size} & -\/ an integer value representing the desired group size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a0515c45d0f818bf21ed88c4528fe4077}\label{class_graph_a0515c45d0f818bf21ed88c4528fe4077}} 
+\index{Graph@{Graph}!case2\_a@{case2\_a}}
+\index{case2\_a@{case2\_a}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{case2\_a()}{case2\_a()}}
+{\footnotesize\ttfamily void Graph\+::case2\+\_\+a (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destiny,  }\item[{int}]{group\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that finds travel routes for a group, allowing division into subgroups with different paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+{\em group\+Size} & -\/ an integer value representing the desired group size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a869d3d6616adf0d0fa8ce575c2faa893}\label{class_graph_a869d3d6616adf0d0fa8ce575c2faa893}} 
+\index{Graph@{Graph}!case2\_b@{case2\_b}}
+\index{case2\_b@{case2\_b}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{case2\_b()}{case2\_b()}}
+{\footnotesize\ttfamily void Graph\+::case2\+\_\+b (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destiny,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{path\+List,  }\item[{int}]{old\+Group\+Size,  }\item[{int}]{new\+Group\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that receives travel routes and the group size for it, then corrects the routes to accommodate for a different group size (if new group size is smaller or the same as before it returns the existing paths) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+{\em path\+List} & -\/ a list of integer lists representing the user\textquotesingle{}s input paths \\
+\hline
+{\em old\+Group\+Size} & -\/ an integer value representing the desired group size \\
+\hline
+{\em new\+Group\+Size} & -\/ an integer value representing the desired group size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a73d0a5660aba580b3ff020a6eb9a19fd}\label{class_graph_a73d0a5660aba580b3ff020a6eb9a19fd}} 
+\index{Graph@{Graph}!case2\_c@{case2\_c}}
+\index{case2\_c@{case2\_c}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{case2\_c()}{case2\_c()}}
+{\footnotesize\ttfamily void Graph\+::case2\+\_\+c (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destiny }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that calculates the largest group size and travel routes between origin and destination, allowing group to divide into different paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a39f44063eb9db9387514fe7d620d0d9e}\label{class_graph_a39f44063eb9db9387514fe7d620d0d9e}} 
+\index{Graph@{Graph}!case2\_d@{case2\_d}}
+\index{case2\_d@{case2\_d}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{case2\_d()}{case2\_d()}}
+{\footnotesize\ttfamily void Graph\+::case2\+\_\+d (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destiny,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{path\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that calculates the minimum travel time for the arrival off the whole group to the end destination (taking into account the different paths traveled) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+{\em path\+List} & -\/ a list of integer lists representing the user\textquotesingle{}s input paths \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a7c3535f65c293623ab57a769c2c6ad4f}\label{class_graph_a7c3535f65c293623ab57a769c2c6ad4f}} 
+\index{Graph@{Graph}!case2\_e@{case2\_e}}
+\index{case2\_e@{case2\_e}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{case2\_e()}{case2\_e()}}
+{\footnotesize\ttfamily void Graph\+::case2\+\_\+e (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destiny,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{path\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that calculates all the waiting times (for subgroup that arrives first) between bus changes that occurs in the give travel routes considering that the whole group has to leave the station (node) at the same time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+{\em path\+List} & -\/ a list of integer lists representing the user\textquotesingle{}s input paths \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_aeea3f2b7642feafffed0902239447a71}\label{class_graph_aeea3f2b7642feafffed0902239447a71}} 
+\index{Graph@{Graph}!initialize@{initialize}}
+\index{initialize@{initialize}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Graph\+::initialize (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Function that initializes the graph with the given file\textquotesingle{}s information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ string representing the file that contains the graph information \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_ac9089828080b78f7653ce83976446029}\label{class_graph_ac9089828080b78f7653ce83976446029}} 
+\index{Graph@{Graph}!isValid@{isValid}}
+\index{isValid@{isValid}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool Graph\+::is\+Valid (\begin{DoxyParamCaption}\item[{int}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that determines if node is valid in current graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & -\/ an integer value representing the node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ if node belongs to the graph 
+
+false -\/ otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a27868c0c4932b5a7634816e0a968e6e3}\label{class_graph_a27868c0c4932b5a7634816e0a968e6e3}} 
+\index{Graph@{Graph}!pathBuild@{pathBuild}}
+\index{pathBuild@{pathBuild}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{pathBuild()}{pathBuild()}}
+{\footnotesize\ttfamily int Graph\+::path\+Build (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destiny,  }\item[{vector$<$ int $>$ \&}]{path,  }\item[{int}]{capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function creates a path between origin and destination (if it exists) using the stored information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+{\em path} & -\/ an integer list that will be filled with a path \\
+\hline
+{\em capacity} & -\/ maximum capacity of current path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ representing if an error occurs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_ae02e2d9fa09adf2cb37750f47dc949ba}\label{class_graph_ae02e2d9fa09adf2cb37750f47dc949ba}} 
+\index{Graph@{Graph}!showPathCase1@{showPathCase1}}
+\index{showPathCase1@{showPathCase1}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{showPathCase1()}{showPathCase1()}}
+{\footnotesize\ttfamily void Graph\+::show\+Path\+Case1 (\begin{DoxyParamCaption}\item[{int}]{origin,  }\item[{int}]{destiny }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that prints a path from the origin to destination for case 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a62dc0371ad4c7f6a58e010482633ee56}\label{class_graph_a62dc0371ad4c7f6a58e010482633ee56}} 
+\index{Graph@{Graph}!showPathCase2@{showPathCase2}}
+\index{showPathCase2@{showPathCase2}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{showPathCase2()}{showPathCase2()}}
+{\footnotesize\ttfamily int Graph\+::show\+Path\+Case2 (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ int $>$ $>$ \&}]{path\+List,  }\item[{vector$<$ int $>$ \&}]{capacities }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that prints a path from the origin to destination for case 2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ an integer value representing the origin node \\
+\hline
+{\em destiny} & -\/ an integer value representing the destiny node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a99922f91257adb8fbd354e31d3a3198c}\label{class_graph_a99922f91257adb8fbd354e31d3a3198c}} 
+\index{Graph@{Graph}!verifyFoundPath@{verifyFoundPath}}
+\index{verifyFoundPath@{verifyFoundPath}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{verifyFoundPath()}{verifyFoundPath()}}
+{\footnotesize\ttfamily int Graph\+::verify\+Found\+Path (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$ \&}]{path\+List,  }\item[{vector$<$ int $>$ \&}]{path,  }\item[{vector$<$ int $>$ \&}]{capacities,  }\item[{int \&}]{capacity,  }\item[{int}]{remainder\+Size = {\ttfamily \mbox{\hyperlink{_utils_8h_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function that verifies is a path already exists, if it does instead of adding it again to travel routes List (path\+List) it increments the number of travelers in it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\+List} & -\/ a list of integer lists representing the user\textquotesingle{}s input paths \\
+\hline
+{\em path} & -\/ an integer list that will be filled with a path \\
+\hline
+{\em capacity} & -\/ maximum capacity of current path \\
+\hline
+{\em capacities} & -\/ an integer list containing all capacities \\
+\hline
+{\em remainder\+Size} & -\/ an integer representing the remainder people \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ representing a new remainder\+Size 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_graph_a71b5e16eb9e0670fea3ecee3526abb41}\label{class_graph_a71b5e16eb9e0670fea3ecee3526abb41}} 
+\index{Graph@{Graph}!nodes@{nodes}}
+\index{nodes@{nodes}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{struct_node}{Node}}$>$ Graph\+::nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & -\/ a vector containing \mbox{\hyperlink{struct_node}{Node}} type struct that includes all nodes of current \mbox{\hyperlink{class_graph}{Graph}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_graph_8h}{Graph.\+h}}\item 
+Graph.\+cpp\end{DoxyCompactItemize}
