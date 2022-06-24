@@ -1,4 +1,4 @@
-# Urban Logistics for Goods Delivery
+# Urban Logistics for Goods Delivery (Grade: 18.5/20)
 
 IMPORTANT - the files generate by the program is stored in the output folder (on the main folder, together with src, documentation, etc)
 

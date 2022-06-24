@@ -33,6 +33,10 @@ A delivery company wants to see its business maximized according to the followin
 The following project implements solutions for each of the cases using some studied algorithms, such as greedy, bin-packing, knapsack and job scheduling. <br>
 The original repository can be viewed [here](https://github.com/marcwferreira/DA_estafetas).
 
+#### Empirical evaluation
+
+In addition to the C++ language, we also use Python and Bash to assess the complexity of the algorithms. We built a script (`packagesGenerator.py`) that generates N orders based on the original data provided by the teachers, ensuring that a percentage are express orders. Then the project script is called via a Bash script, which injects the orders file and the necessary parameters into a `caseX.sh`, returning the time in seconds of each execution to the `output.csv` file. The cycle is repeated 10 times in increments of 2000 units for each case. The advantage of `.csv` is that it can be interpreted by Excel and that's where we were able to build a graph, with regression lines to evaluate the linearity of each case.
+
 With:
 - [x] Francisco João Gonçalves Calado Araújo
 - [x] Fábio Araújo de Sá
