@@ -66,7 +66,7 @@ In addition to the C++ language, we also use Python and Bash to assess the compl
 
 #### Testing
 
-
+The tests for each case were semi-automatic. We created a small graph of 10 nodes but complex enough to serve as a basis for all possible scenarios. Then we created a [script](https://github.com/Fabio-A-Sa/Y2S2-DesenhoDeAlgoritmos/blob/main/Project%202/runTests.sh) in Bash that injected the necessary parameters, showing the input and the output. All tests passed, both with small graphs (10 nodes) and large graphs (5000 nodes).
 
 #### With:
 
