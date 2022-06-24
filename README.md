@@ -30,7 +30,7 @@ A delivery company wants to see its business maximized according to the followin
 - Optimization of the company's profit by delivering orders using lower cost vans;
 - Optimization of express deliveries, improving average delivery time;
 
-The following project implements solutions for each of the cases using some studied algorithms, such as greedy, bin-packing, knapsack and job scheduling.
+The following project implements solutions for each of the cases using some studied algorithms, such as greedy, bin-packing, knapsack and job scheduling. <br>
 The original repository can be viewed [here](https://github.com/marcwferreira/DA_estafetas).
 
 With:
