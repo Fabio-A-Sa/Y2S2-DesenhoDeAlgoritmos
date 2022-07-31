@@ -2,7 +2,7 @@
 
 This repository contains all the exercises and assessments of the UC Desenho de Algoritmos, taught by [Rosaldo Rossetti](https://sigarra.up.pt/feup/pt/func_geral.formview?p_codigo=419241) and [Ana Paula Tomás](https://www.dcc.fc.up.pt/~apt/) at [Integrated Master in Informatics and Computing Engineering](https://sigarra.up.pt/feup/pt/cur_geral.cur_view?pv_curso_id=742) [MIEIC] at the [Faculty of Engineering of the University of Porto](https://sigarra.up.pt/feup/pt/web_page.Inicial) [FEUP]. <br> <br>
 
-<h2 align = "center" >Final Grade: 12/20</h2>
+<h2 align = "center" >Final Grade: 13/20</h2>
 <p align = "center" >
   <img 
        title = "FEUP logo"
